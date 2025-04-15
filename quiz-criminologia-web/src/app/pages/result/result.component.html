@@ -1,1 +1,7 @@
-<p>result works!</p>
+<div class="result">
+  <h1>Resultados</h1>
+  <p>Tu puntaje es: {{ score }} de {{ totalQuestions }}</p>
+  <p>{{ message }}</p>
+  <button mat-raised-button color="primary" [routerLink]="['/quiz']">Volver a jugar</button>
+</div>
+
