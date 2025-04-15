@@ -1,0 +1,16 @@
+<div class="quiz-container" *ngIf="questions.length">
+
+  <mat-card>
+    <h2>Pregunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</h2>
+    <p>{{ questions[currentQuestionIndex].question }}</p>
+
+    <div class="options">
+      <button mat-raised-button color="accent"
+              *ngFor="let option of questions[currentQuestionIndex].options; let i = index"
+              (click)="selectOption(i)">
+        {{ option }}
+      </button>
+    </div>
+  </mat-card>
+
+</div>
